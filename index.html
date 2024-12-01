@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Dialer SDK Example</title>
+</head>
+
+<body>
+
+    <!-- Include the compiled SDK file -->
+    <script type="text/javascript" src="dist/1.0.0/cleverstack-sdk.js"></script>
+    <script>
+        CSDialerSDK.init({
+            apiKey: '718dfeabc1338fa5',
+            user_id: '678',
+            env: 'dev',
+            authAPI: 'https://dev-api.cleverstack.in',
+            wssServerEnv: 'dev',
+            isCallingEnabled: true,
+            open: true,
+            mode: '',
+        });
+    </script>
+    <!-- <script>
+        (function (d, t) {
+            var SRC_FILE = "http://127.0.0.1:5500/dist/csdialer-sdk.js";
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.src = SRC_FILE;
+            g.defer = true;
+            g.async = true;
+            g.onload = function () {
+                CSDialerSDK.init({
+                    apiKey: 'e14c40dfccb0ca0d',
+                    user_id: '928',
+                    env: 'dev',
+                    authAPI: 'https://dev-api.cleverstack.in',
+                    wssServerEnv: 'pd',
+                    isCallingEnabled: true,
+                    open: true,
+                    mode: '',
+                    targetElementId: 'csdialer-root'
+                });
+            };
+            s.parentNode.insertBefore(g, s);
+        })(document, "script");
+    </script> -->
+
+</body>
+
+</html>
