@@ -1,5 +1,5 @@
 {
-  "version": "1.0.6",
+  "version": "1.0.7",
   "scripts": {
     "build": "webpack",
     "dev": "webpack --watch"
@@ -8,7 +8,7 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
-    "@cleverstack/dialer-widget": "0.1.2",
+    "@cleverstack/dialer-widget": "0.1.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.19",
