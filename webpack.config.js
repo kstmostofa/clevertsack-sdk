@@ -68,6 +68,16 @@ module.exports = async () => {
     },
     resolve: {
       extensions: ['.js', '.jsx'],
+      // Force a SINGLE copy of React/React-DOM. The widget (@cleverstack/
+      // dialer-widget) declares react as a peerDependency, but when it is
+      // linked from source (file:) its own node_modules/react can get bundled
+      // alongside this wrapper's react, producing two React instances and
+      // "Invalid hook call" (React error #321) → blank page. Aliasing pins
+      // every react/react-dom import to this repo's single copy.
+      alias: {
+        react: path.resolve(__dirname, 'node_modules/react'),
+        'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
+      },
     },
     plugins: [
       new CopyWebpackPlugin({
